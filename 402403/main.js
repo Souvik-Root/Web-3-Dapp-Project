@@ -1,7 +1,7 @@
 // INITIALISE MORALIS
 (async function(){
-    const serverUrl = "SERVER_URL"
-    const appId = "APP_ID"
+    const serverUrl = "https://c4mtphhlrml7.usemoralis.com:2053/server";
+    const appId = "EoSrsE0Z8ReZUP9vnaqh2IKjx3zDrJgzDFkE26Pz";
     await Moralis.start({ serverUrl, appId })
 })();
 
@@ -39,7 +39,7 @@ let network = '';
 
 
 // Reloading app onAccountsChanged and getting new signature
-Moralis.onAccountsChanged(async function (accounts) {
+Moralis.onAccountChanged(async function (account) {
     await Moralis.User.logOut();
     document.getElementById("web3apiTitle").click();
     await Moralis.Web3.authenticate();
@@ -51,7 +51,6 @@ Moralis.onAccountsChanged(async function (accounts) {
     if (Moralis.User.current() != null && window.location.pathname.endsWith(dashboard)) {
             getNetwork();
             getAddress();
-            await listAvailableTokens();
         }
         Moralis.onChainChanged(function(){
             getNetwork();
@@ -479,7 +478,7 @@ getNFTs2 = async (nfts) => {
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
-                        // console.log(data);
+                        console.log(data);
                         let content = `
                     <div class="card col-md-4 nfts" data-id="${nft.token_id}" data-address="${nft.token_address}" data-type="${nft.contract_type}">
                         <img src="${fixURL(data.image_url)}" class="card-img-top" height=200>
