@@ -10,3 +10,12 @@ For more details visit - youtube.com/watch?v=MY4WYoZPr-U
 
 1. Metamask account (preferably)
 2. Rinkby free tokens https://www.alchemy.com/overviews/rinkeby-testnet
+
+
+## Group Members
+
+1. Souvik Mazumder
+2. Manpreet Singh
+3. Pragna Mallikarjuna Swamy
+4. Aishwarya Madupuri Suresh
+5. Pramit Gupta
